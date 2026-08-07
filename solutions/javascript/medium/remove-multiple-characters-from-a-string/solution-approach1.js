@@ -1,18 +1,12 @@
 // ──────────────────────────────────────────────────
-// Link        https://www.hackerrank.com/contests/javascript-1786090755/challenges/remove-multiple-characters-from-a-string/problem?isFullScreen=true
+// Link        https://www.hackerrank.com/contests/web-design-javascript/challenges/remove-multiple-characters-from-a-string/problem?isFullScreen=true
 // Problem     Remove Multiple Characters from a String
 // Difficulty  Medium
 // Subdomain   N/A
 // Platform    HackerRank
 // Language    javascript
 // Status      Accepted
-// Submitted   2026-08-07, 03:02 p.m.
-// Technique   sequential-string-slicing-with-offset
-// Time        O(N * |S|)
-// Space       O(|S|)
-// Insight     The algorithm maintains a running count of removed characters to adjust the target index dynamically, ensuring that subsequent removals target the correct character in the shrinking string.
-// Interview   Before: "I could use a boolean array to mark indices for removal." After: "I used a sequential slicing approach with an offset counter, which runs in O(N * |S|) time, correctly handling the shifting indices as characters are removed from the string."
-// Pitfalls    (1) Failing to decrement the target index by the number of previously removed characters leads to deleting the wrong characters.  (2) Ignoring the requirement to validate each position against the current string length can cause out-of-bounds errors.  (3) Using string concatenation in a loop creates multiple intermediate string objects, which is inefficient for very large inputs.
+// Submitted   2026-08-07, 09:15 p.m.
 // ──────────────────────────────────────────────────
 
 function processData(input) {

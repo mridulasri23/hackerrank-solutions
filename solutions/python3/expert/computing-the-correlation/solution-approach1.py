@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-13, 10:32 a.m.
+# Technique   pearson-correlation-coefficient-calculation
+# Time        O(N)
+# Space       O(N)
+# Insight     The Pearson correlation coefficient is computed by calculating the mean of each vector and then evaluating the ratio of the covariance to the product of the standard deviations.
+# Interview   Before: "How would you calculate the linear correlation between two large datasets without external libraries?" After: "I compute the Pearson coefficient in O(N) time by iterating through the lists to find means, then calculating the covariance and standard deviations, ensuring the result is rounded to two decimal places as required."
+# Pitfalls    (1) Failing to handle the floating-point precision requirements for the final output format.  (2) Assuming the input data is already normalized, which would lead to incorrect correlation results.  (3) Neglecting the O(N) space complexity when processing up to 500,000 records, which could lead to memory exhaustion.
 # ──────────────────────────────────────────────────
 
 import math

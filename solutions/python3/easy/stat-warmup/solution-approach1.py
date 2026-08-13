@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-13, 10:30 a.m.
+# Technique   sorting-and-frequency-counting
+# Time        O(N log N)
+# Space       O(N)
+# Insight     The implementation calculates descriptive statistics by sorting the dataset to determine the median and using a frequency map to identify the smallest mode.
+# Interview   Before: "How would you compute the mode and confidence interval for a large dataset?" After: "I would use a hash map for O(N) frequency counting and sort the array in O(N log N) to find the median, then apply the standard deviation formula to derive the 95% confidence interval."
+# Pitfalls    (1) Failing to sort the array before calculating the median leads to incorrect middle-element selection.  (2) Selecting the wrong mode when multiple elements share the maximum frequency by ignoring the requirement to pick the numerically smallest integer.  (3) Using the sample standard deviation formula (dividing by N-1) instead of the population standard deviation formula (dividing by N) as specified in the problem.
 # ──────────────────────────────────────────────────
 
 import math
